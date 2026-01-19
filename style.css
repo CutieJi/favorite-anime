@@ -1,0 +1,272 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body
+{
+  height: 100vh;
+  overflow: hidden;
+}
+
+input
+{
+  display: none;
+}
+
+.hero
+{
+  display: flex;
+  height: 100vh;
+}
+
+.content
+{
+  width: 55%;
+  background: #fff;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo
+{
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  border: 2px solid #e10600;
+  border-radius: 10px;
+  color: #e10600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.monogram
+{
+  font-size: 26px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border: 2px solid #e10600;
+  border-radius: 6px;
+}
+
+.name
+{
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.bg-text
+{
+  position: absolute;
+  top: 140px;
+  left: -40px;
+  font-size: 165px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.05);
+  letter-spacing: 10px;
+}
+
+.info
+{
+  position: absolute;
+  top: 260px;
+  max-width: 420px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.8s ease;
+}
+
+.info span
+{
+  font-size: 14px;
+  color: #666;
+}
+
+.info h2
+{
+  font-size: 50px;
+  margin: 15px 0;
+}
+
+.info p
+{
+  color: #444;
+  line-height: 1.7;
+}
+
+.images-bg
+{
+  width: 45%;
+  position: relative;
+  background: #111;
+  background-image: url('/html-class/bg.png');
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+
+.images-slides
+{
+  display: flex;
+  width: 200%;
+  height: 100%;
+  transition: 1s ease;
+}
+
+
+.char1
+{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.char2
+{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.char3
+{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.char4
+{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.indicators
+{
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.indicators span
+{
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 10px 0;
+}
+
+.arrow
+{
+  position: absolute;
+  bottom: 80px;
+  width: 60px;
+  height: 60px;
+  background: #000;
+  color: #fff;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;
+}
+
+.arrow:hover
+{
+  background: red;
+}
+
+.left
+{
+  left: 60%;
+}
+
+.right
+{
+  left: 68%;
+}
+
+#s1:checked~.hero .info-1
+{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#s2:checked~.hero .info-2
+{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#s3:checked~.hero .info-3
+{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#s4:checked~.hero .info-4
+{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#s1:checked~.hero .images-slides
+{
+  transform: translateX(10%);
+}
+
+#s2:checked~.hero .images-slides
+{
+  transform: translateX(-37%);
+}
+
+#s3:checked~.hero .images-slides
+{
+  transform: translateX(-80%);
+}
+
+#s4:checked~.hero .images-slides
+{
+  transform: translateX(-117%);
+}
+
+#s1:checked~.hero .indicators span:nth-child(1),
+#s2:checked~.hero .indicators span:nth-child(2),
+#s3:checked~.hero .indicators span:nth-child(3),
+#s4:checked~.hero .indicators span:nth-child(4)
+{
+  background: #fff;
+}
+
+#s1:checked~.hero .arrow:nth-of-type(1),
+#s1:checked~.hero .arrow:nth-of-type(2)
+{
+  display: flex;
+}
+
+#s2:checked~.hero .arrow:nth-of-type(3),
+#s2:checked~.hero .arrow:nth-of-type(4)
+{
+  display: flex;
+}
+
+#s3:checked~.hero .arrow:nth-of-type(5),
+#s3:checked~.hero .arrow:nth-of-type(6)
+{
+  display: flex;
+}
+
+#s4:checked~.hero .arrow:nth-of-type(7),
+#s4:checked~.hero .arrow:nth-of-type(8)
+{
+  display: flex;
+}
