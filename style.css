@@ -104,7 +104,7 @@ input
   width: 45%;
   position: relative;
   background: #111;
-  background-image: url('/html-class/bg.png');
+  background-image: url('bg.png');
   clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
   overflow: hidden;
 }
@@ -269,4 +269,5 @@ input
 #s4:checked~.hero .arrow:nth-of-type(8)
 {
   display: flex;
+
 }
